@@ -1,4 +1,3 @@
-// Hash de contraseñas con el módulo nativo crypto (sin dependencias extra)
 const crypto = require('crypto');
 
 function hashPassword(password) {
