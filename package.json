@@ -1,0 +1,19 @@
+{
+  "name": "api-rest",
+  "version": "1.0.0",
+  "description": "REST API con Node.js, Express y SQL Server (mssql)",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "keywords": ["express", "mssql", "rest-api"],
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "morgan": "^1.10.0",
+    "mssql": "^11.0.1",
+    "nodemon": "^3.1.4"
+  }
+}
