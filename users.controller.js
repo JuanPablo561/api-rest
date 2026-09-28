@@ -3,7 +3,6 @@ const { hashPassword } = require('../utils/password');
 
 const isDuplicate = (error) => error.number === 2627 || error.number === 2601;
 
-// GET /users
 const getUsers = async (req, res) => {
   try {
     const pool = await getConnection();
@@ -16,7 +15,6 @@ const getUsers = async (req, res) => {
   }
 };
 
-// GET /users/:id
 const getUser = async (req, res) => {
   try {
     const pool = await getConnection();
@@ -34,7 +32,6 @@ const getUser = async (req, res) => {
   }
 };
 
-// POST /users
 const createUser = async (req, res) => {
   const { name, email, password } = req.body;
   if (!name || !email || !password) {
@@ -60,7 +57,6 @@ const createUser = async (req, res) => {
   }
 };
 
-// PUT /users/:id
 const updateUser = async (req, res) => {
   const { name, email, password } = req.body;
   if (!name || !email) {
@@ -92,7 +88,6 @@ const updateUser = async (req, res) => {
   }
 };
 
-// DELETE /users/:id
 const deleteUser = async (req, res) => {
   try {
     const pool = await getConnection();
