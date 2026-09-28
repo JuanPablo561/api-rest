@@ -14,7 +14,6 @@ app.use(indexRoutes);
 app.use(usersRoutes);
 app.use(authRoutes);
 
-// 404
 app.use((req, res) => {
   res.status(404).json({ message: 'Ruta no encontrada' });
 });
