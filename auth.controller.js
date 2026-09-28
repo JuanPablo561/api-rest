@@ -1,7 +1,6 @@
 const { sql, getConnection } = require('../database/connection');
 const { verifyPassword } = require('../utils/password');
 
-// POST /login
 const login = async (req, res) => {
   const { email, password } = req.body;
   if (!email || !password) {
