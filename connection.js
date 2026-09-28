@@ -15,7 +15,6 @@ const dbSettings = {
 
 let pool = null;
 
-// Devuelve un pool reutilizable (se crea solo la primera vez)
 async function getConnection() {
   if (pool) return pool;
   pool = await new sql.ConnectionPool(dbSettings).connect();
